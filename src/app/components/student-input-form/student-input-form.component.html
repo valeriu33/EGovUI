@@ -1,0 +1,19 @@
+<div mat-dialog-content>
+  <p>What's your favorite animal?</p>
+  <mat-form-field>
+    <label>
+      <input matInput #name placeholder="name">
+    </label>
+    <label>
+      <input matInput #email placeholder="example@email.com">
+    </label>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="close()">Cancel</button>
+  <button mat-button
+          *ngIf="name.value.length >= 3 &&
+                  email.value.includes('@') &&
+                  email.value.includes('.')"
+          (click)="createStudent(name.value, email.value)">Add</button>
+</div>

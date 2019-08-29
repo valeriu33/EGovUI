@@ -58,7 +58,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "EGovRegisterUI:build"
+            "browserTarget": "EGovRegisterUI:build",
+            "proxyConfig": "proxy.json"
           },
           "configurations": {
             "production": {
